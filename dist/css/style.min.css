@@ -458,12 +458,14 @@ body.ie ._ibg img {
   }
 }
 
-body.lock {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
+@media (max-width: 680px) {
+  body.lock {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
 }
 
 .mogo {
