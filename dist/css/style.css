@@ -162,6 +162,10 @@ body._lock {
   overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -488,6 +492,17 @@ body.lock {
   font-size: 64px;
   line-height: 93px;
 }
+@media (min-width: 991.98px) {
+  .mogo__toptitle {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.8s ease 0.8s;
+  }
+  .mogo__toptitle._active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @media (max-width: 1200px) {
   .mogo__toptitle {
     font-size: 48px;
@@ -532,6 +547,17 @@ body.lock {
     line-height: 59px;
     margin-bottom: 50px;
     padding-bottom: 50px;
+  }
+}
+@media (min-width: 991.98px) {
+  .mogo__title {
+    opacity: 0;
+    transform: translate(0, 100%);
+    transition: all 0.8s ease 0.3s;
+  }
+  .mogo__title._active {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
 .mogo__button {
@@ -579,6 +605,7 @@ body.lock {
   flex: 0 1 270px;
   margin: 0 10px;
   cursor: pointer;
+  color: white;
 }
 .mogo__item:hover .mogo__item-line::before {
   width: 100%;
@@ -907,6 +934,17 @@ body.lock {
     padding: 0;
   }
 }
+@media (min-width: 991.98px) {
+  .services__item {
+    opacity: 0;
+    transform: translate(0, 100%);
+    transition: all 0.8s ease 0.3s;
+  }
+  .services__item._active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 .services__item-icon {
   font-size: 70px;
   color: #95E1D3;
@@ -1010,6 +1048,17 @@ body.lock {
     height: 219px;
   }
 }
+@media (min-width: 991.98px) {
+  .unique__images-pad {
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 0.8s ease 0.3s;
+  }
+  .unique__images-pad._active {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 .unique__images-phone {
   position: absolute;
   bottom: -50px;
@@ -1034,6 +1083,17 @@ body.lock {
 @media (max-width: 599.98px) {
   .unique__images-phone img {
     height: 175px;
+  }
+}
+@media (min-width: 991.98px) {
+  .unique__images-phone {
+    opacity: 0;
+    transform: translate(0, 100%);
+    transition: all 0.8s ease 0.6s;
+  }
+  .unique__images-phone._active {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
 
@@ -1749,7 +1809,6 @@ body.lock {
   }
 }
 .people__item-img {
-  animation: yourAnimation 3s ease 0s infinite normal none;
   margin-right: 50px;
   height: 130px;
   width: 130px;
@@ -1764,6 +1823,17 @@ body.lock {
   .people__item-img {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 991.98px) {
+  .people__item-img {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.8s ease 0.3s;
+  }
+  .people__item-img._active {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 .people__item-text {
@@ -1830,6 +1900,17 @@ body.lock {
   .people__item-desc {
     font-size: 14px;
     line-height: 16px;
+  }
+}
+@media (min-width: 991.98px) {
+  .people__item-desc {
+    opacity: 0;
+    transform: translate(0, 100%);
+    transition: all 0.8s ease 0.3s;
+  }
+  .people__item-desc._active {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
 
@@ -2029,12 +2110,24 @@ body.lock {
   z-index: -1;
 }
 .latest__icon {
+  animation: latest 3s ease 0s infinite normal none;
   margin-bottom: 20px;
 }
 .latest__text-subtitle {
   color: #F38281;
 }
 
+@keyframes latest {
+  0.0% {
+    transform: translate(0, 0);
+  }
+  48.4% {
+    transform: translate(0, 20px);
+  }
+  99.5% {
+    transform: translate(0, 0);
+  }
+}
 .blogs {
   padding: 60px 0;
 }
