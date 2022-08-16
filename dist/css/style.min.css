@@ -1454,8 +1454,15 @@ body.lock {
 .team__item-list {
   display: flex;
 }
-.team__item-list li:not(:last-child) {
-  margin-right: 2px;
+@media (min-width: 767.98px) {
+  .team__item-list li:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+@media (max-width: 767.98px) {
+  .team__item-list li {
+    margin-right: 2px;
+  }
 }
 .team__item-link {
   font-size: 42px;
