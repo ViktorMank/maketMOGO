@@ -554,7 +554,7 @@ body.ie ._ibg img {
 @media (min-width: 991.98px) {
   .mogo__title {
     opacity: 0;
-    transform: translate(0, 100%);
+    transform: translate(0, 50%);
     transition: all 0.8s ease 0.3s;
   }
   .mogo__title._active {
@@ -1090,7 +1090,7 @@ body.ie ._ibg img {
 @media (min-width: 991.98px) {
   .unique__images-phone {
     opacity: 0;
-    transform: translate(0, 100%);
+    transform: translate(0, 50%);
     transition: all 0.8s ease 0.6s;
   }
   .unique__images-phone._active {
